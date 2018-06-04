@@ -1,2 +1,12 @@
-hello world, from Magnus + ny fix + contribution to playbook
-change
+- name: Install Tomcat Application server
+  hosts: all
+  tasks:
+    - name: Ensure tomcat is installed
+      yum:
+        name: tomcat
+        state: present
+    - name: Ensure tomcat service is enabled and started
+      service:
+        name: tomcat
+        enabled: no
+        state: started
