@@ -8,5 +8,5 @@
     - name: Ensure tomcat service is enabled and started
       service:
         name: tomcat
-        enabled: no
+        enabled: yes
         state: started
